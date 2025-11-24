@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 { @apply font-semibold text-[#ADC9BA] font-arimo}
+  p { @apply font-medium text-[#ADC9BA] font-arimo}}
+
+.p1-text {
+  font-size: 10vw;
+  width: auto;
+  line-height: 1;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+.big-text {
+  font-size: 15vw;
+  opacity: 0;
+  background: linear-gradient(90deg, #7cd8d3, #0a97ad,#40a8b4,#96c5f4,#7cd8d3);
+  background-size: 50% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: background-slide 4s linear infinite, fade-in-up 0.8s ease-out forwards;
+}
+  
+.delay-1 {animation-delay: 200ms;}
+.delay-2 {animation-delay: 400ms;}
+.delay-3 {animation-delay: 600ms;}
+.delay-4 {animation-delay: 800ms;}
+
+.p2-container {
+  opacity: 0;
+  border-color: #86e0d7;
+  border-width: 3px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  display: block;
+  border-radius: 30px;
+  width: 90%;
+  height: 50%;
+  filter: none;
+  transition: filter 0.2s ease;
+}
+.p2-container:hover, .p3-container:hover {
+  filter: sepia(100%);
+}
+
+.p2-container img {
+  transform: scale(1.2);
+  width: 100%;
+  height: 100%;
+  object-position: bottom left;
+  object-fit: none;
+  display: block;
+}
+
+.p2-text {
+  margin-left: 10px;
+  letter-spacing: -5px;
+  font-size: 138px;
+  width: auto;
+  line-height: 0.75;
+  opacity: 1;
+}
+
+
+.p2-image-label {
+  font-weight: 900;
+  justify-content: center;
+  text-align: left;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 8px 12px;
+  background-color: rgba(134, 224, 215, 0.5);
+  color: #aec8ba;
+  font-size: 2rem;
+  width: 100%;
+  height: 70px;
+}
+
+.p3-container {
+  opacity: 0;
+  border-color: #86e0d7;
+  border-width: 3px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  display: block;
+  border-radius: 30px;
+  width: 90%;
+  height: 100%;
+  filter: none;
+  transition: filter 0.2s ease;
+}
+.p3-container img {
+  transform: scale(3);
+  width: 100%;
+  height: 100%;
+  object-position: center left;
+  object-fit: none;
+  display: block; 
+}
+.p3-text {
+  margin-right: 30px;
+  letter-spacing: -5px;
+  font-size: 138px;
+  width: auto;
+  line-height: 0.75;
+  opacity: 1;
+}
+.p3-image-label {
+  font-weight: 900;
+  justify-content: center;
+  text-align: left;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 8px 12px;
+  background-color: rgba(134, 224, 215, 0.5);
+  color: #aec8ba;
+  font-size: 2rem;
+  width: 100%;
+  height: 70px;
+}
+.imgcol {
+  height: 70px;
+  width: 70px;
+  filter: brightness(0) saturate(100%) invert(88%) sepia(7%) saturate(547%) hue-rotate(95deg) brightness(88%) contrast(92%);
+}
+
+.animated-element {
+  animation: slide-in linear forwards;
+  animation-timeline: view(self);
+  animation-range: entry 0% cover 50%;
+}
+.name-text {
+  font-size: 5vh;
+}
+.sub-text {
+  font-size: 3vh;
+}
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes background-slide {
+  0% {background-position: 0% 50%;}
+  100% {background-position: 100% 50%;}
+}
