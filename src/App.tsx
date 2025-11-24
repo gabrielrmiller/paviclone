@@ -195,7 +195,7 @@ function App() {
       <div className='navbar-main flex items-center w-[80%] mx-auto' ref={navbar}>
         <div className={`${navslide} mx-5 opacity-0 bar h-0 flex flex-col rounded-full border-main border-solid border-2 flex-grow`} style={{animationDelay: '0.2s'}}></div>
         <ul className='link-house flex h-16 gap-4'>
-          <li><a target="_blank" href="./Resume.pdf" className={`opacity-0 ${navfade}`} style={{animationDelay: '0.4s'}}><img className='imgcol' src="resume_icon.png"></img></a></li>
+          <li><a target="_blank" href="Resume.pdf" className={`opacity-0 ${navfade}`} style={{animationDelay: '0.4s'}}><img className='imgcol' src="resume_icon.png"></img></a></li>
           <li><a target="_blank" href="mailto:gr2mille@uwaterloo" className={`opacity-0 ${navfade}`} style={{animationDelay: '0.6s'}}><img className='imgcol' src="email.png"></img></a></li>
           <li><a target="_blank" href="www.linkedin.com/in/gabrielrmiller" className={`opacity-0 ${navfade}`} style={{animationDelay: '0.8s'}}><img className='imgcol' src="linkedin.webp"></img></a></li>
           <li><a target="_blank" href="https://github.com/gabrielrmiller" className={`opacity-0 ${navfade}`} style={{animationDelay: '1s'}}><img className='imgcol' src="github.png"></img></a></li>
