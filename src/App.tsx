@@ -15,7 +15,7 @@ function App() {
   const [navbarVisible, setNavbarVisible] = useState(false);
 
   const slideRef = useRef<HTMLDivElement>(null);
-  const [x, setX] = useState(100);
+  const [x, setX] = useState(0);
 
   const zoomRef = useRef<HTMLDivElement>(null);
   const [zoom, setZoom] = useState(0);
@@ -77,7 +77,7 @@ function App() {
       const rect = slideRef.current.getBoundingClientRect();
       const start = windowHeight * 0.9;
       const progress = start - rect.top;
-      setX(200 - progress);
+      setX(500 - progress);
     };
     window.addEventListener("scroll", handleScroll);
     handleScroll();
@@ -138,18 +138,18 @@ function App() {
     <div className="h-full" ref={page2Ref}>
       <div className='flex flex-row h-auto'>
         <div className='ml-[10.22px] p2-text'>
-          <h1 className={`opacity-0 ${ts1}`} style={{animationDelay: '0.3s'}}>Intersecting</h1>
-          <h1 className={`opacity-0 ${ts1}`} style={{animationDelay: '0.6s'}}>awesome</h1>
-          <h1 className={`opacity-0 ${td1}  text-purp`} style={{animationDelay: '0.9s'}}>awesome</h1>
-          <h1 className={`opacity-0 ${td1}  text-mid`} style={{animationDelay: '1.2s'}}>awesome</h1>
-          <h1 className={`opacity-0 ${td1}  text-scale`} style={{animationDelay: '1.5s'}}>awesome</h1>
-          <h1 className={`opacity-0 ${ts1} `} style={{animationDelay: '1.8s'}}>bits &</h1>
-          <h1 className={`opacity-0 ${ts1} `} style={{animationDelay: '2.1s'}}>jokes...</h1>
+          <h1 className={`opacity-0 ${ts1}`} style={{animationDelay: '0.2s'}}>Intersecting</h1>
+          <h1 className={`opacity-0 ${ts1}`} style={{animationDelay: '0.4s'}}>awesome</h1>
+          <h1 className={`opacity-0 ${td1}  text-purp`} style={{animationDelay: '0.6s'}}>awesome</h1>
+          <h1 className={`opacity-0 ${td1}  text-mid`} style={{animationDelay: '0.8s'}}>awesome</h1>
+          <h1 className={`opacity-0 ${td1}  text-scale`} style={{animationDelay: '1s'}}>awesome</h1>
+          <h1 className={`opacity-0 ${ts1} `} style={{animationDelay: '1.2s'}}>bits &</h1>
+          <h1 className={`opacity-0 ${ts1} `} style={{animationDelay: '1.4s'}}>jokes...</h1>
         </div>
         <div className='flex flex-col gap-y-10 flex-grow items-center justify-center text-black rounded-xl w-auto'>
-          <a className={`p2-container group ${fi1}`} style={{animationDelay: '2.4s'}} target="_blank" href="https://youtube.com">
+          <a className={`p2-container group ${fi1}`} style={{animationDelay: '1.6s'}} target="_blank" href="https://youtube.com">
           <img src="cat.webp"/><div className='transition-color duration-200 ease p2-image-label group-hover:text-[#564c39]'>Funny Cat</div></a>
-          <a className={`p2-container group ${fi1} `} style={{animationDelay: '2.7s'}} target="_blank" href="https://youtube.com">
+          <a className={`p2-container group ${fi1} `} style={{animationDelay: '1.8s'}} target="_blank" href="https://youtube.com">
           <img src="cat.webp"/><div className='transition-color duration-200 ease p2-image-label group-hover:text-[#564c39]'>Funnier Cat</div></a>
         </div>
       </div>
@@ -175,11 +175,11 @@ function App() {
         </div>
       </div>
     </div>
-    <div className='overflow-hidden h-screen flex flex-col gap-16' ref={page4Ref}>
+    <div className='overflow-hidden h-[90vh] flex flex-col gap-16' ref={page4Ref}>
       <div ref={slideRef} className='text-nowrap p2-text text-center transition-transform' style={{transform: `translateX(${x}px)`, transition: "transform linear"}}>
         <h1>I want to hang out with</h1>
       </div>
-      <div ref={zoomRef} className='p2-text text-center transition-transform' style={{transform: `scale(${zoom})`, transformOrigin: 'top', transition: "transform linear, opacity 0.3s ease-in-out", opacity: opacity}}>
+      <div ref={zoomRef} className='p2-text text-center transition-transform' style={{transform: `scale(${Math.min(zoom, 3)})`, transformOrigin: 'top', transition: "transform linear, opacity 0.3s ease-in-out", opacity: opacity}}>
           <h1 className={`big-text ${fol}`}>YOU</h1>
       </div>
 
