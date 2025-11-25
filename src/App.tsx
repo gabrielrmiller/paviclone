@@ -158,9 +158,9 @@ function App() {
     <div className='h-screen' ref={page3Ref}>
       <div className='h-[85vh] flex flex-row'>
         <div className='flex flex-col gap-y-10 flex-grow items-center justify-center text-black rounded-xl w-auto'>
-            <a className={`p3-container group ${fi2}`} style={{animationDelay: '2.4s'}} target="_blank" href="https://youtube.com">
-              <img src="cat.webp"/><div className='transition-color duration-200 ease p3-image-label group-hover:text-[#564c39]'>Funny Cat</div>
-            </a>
+          <a className={`p3-container group ${fi2}`} style={{animationDelay: '2.4s'}} target="_blank" href="https://youtube.com">
+            <img src="cat.webp"/><div className='transition-color duration-200 ease p3-image-label group-hover:text-[#564c39]'>Funny Cat</div>
+          </a>
         </div>
         <div className='flex flex-row h-auto'>
           <div className='ml-[10.22px] p3-text'>
@@ -179,14 +179,14 @@ function App() {
       <div ref={slideRef} className='text-nowrap p2-text text-center transition-transform' style={{transform: `translateX(${x}px)`, transition: "transform linear"}}>
         <h1>I want to hang out with</h1>
       </div>
-      <div ref={zoomRef} className='p2-text text-center transition-transform' style={{transform: `scale(${Math.min(zoom, 3)})`, transformOrigin: 'top', transition: "transform linear, opacity 0.3s ease-in-out", opacity: opacity}}>
-          <h1 className={`big-text ${fol}`}>YOU</h1>
+      <div ref={zoomRef} className='p2-text text-center' style={{transform: `scale(${Math.min(zoom, 3)})`, transformOrigin: 'top center', transition: "transform linear, opacity 0.3s ease-in-out", opacity: opacity}}>
+          <h1 className={`leading-none big-text ${fol}`}>YOU</h1>
       </div>
 
     </div>
     <div className='page-5 min-h-screen flex flex-col text-center'>
       <div className='flex items-center w-full justify-center'>
-        <img src="rabbit.png" className='h-[20vh] shrink-0 aspect-square rounded-full overflow-hidden border-main border-solid border-2'/>
+        <img src="me.jpg" className='h-[20vh] shrink-0 aspect-square rounded-full overflow-hidden ml-5 border-main border-solid border-2'/>
         <div className='flex flex-col px-10 text-center justify-center'>
           <h1 className='name-text'>Gabriel Miller</h1>
           <p className='sub-text'>Financial Analytics & Risk Management @ UWaterloo</p>
@@ -201,12 +201,68 @@ function App() {
           <li><a target="_blank" href="https://github.com/gabrielrmiller" className={`opacity-0 ${navfade}`} style={{animationDelay: '1s'}}><img className='imgcol' src="github.png"></img></a></li>
         </ul>
       </div>
-      <div>
-        <h1 className='name-text py-5'>Recent Experiences</h1>
-      </div>
-    </div>
-      
-    </div>
+      <div className='mx-auto mb-5 w-2/3 text-center h-auto'><h1 className='name-text py-5'>Recent Experiences</h1>
+        <div>
+          <div className='wagwan'>
+            <h2>Freelance Software Developer</h2>
+            <p className='text-2xl'>December 2025 - Current</p>
+            <hr></hr>
+            <ul className='list-disc ml-2 p-4 text-main'>
+              <li>Developed front-end and back-end programs for personal and professional use</li>
+              <li>Within a React framework, I utilise Typescript, Tailwind CSS, & HTML to create stunning websites with highly optimized code</li>
+              <li>Portfolio of work: <a className='underline' target='_blank' href='https://bettergpt-lake.vercel.app/'>Bettergpt</a> </li>
+            </ul>
+          </div>
+        </div>
+          <div className='flex'>
+            <div className='wagwan w-full'>
+              <div>
+                <h2> Exam P - SOA</h2>
+                <p className='text-2xl'>November 2025</p>
+                <hr></hr>
+                <ul className='py-3 text-main'>
+                  <li>Proficient in probability models and risk analysis. </li>
+                </ul>
+              </div>
+            </div>
+            <div className='wagwan w-full'>
+              <div className=''>
+                <h2> Exam FM - SOA</h2>
+                <p className='text-2xl'>August 2025</p>
+                <hr></hr>
+                  <p className=' text-main py-3'>Proficient in interest theory and financial valuation. </p>
+              </div>
+            </div>
+          </div>
+          <div className='flex'>
+            <div className='wagwan w-full'>
+              <div>
+                <h2>UW Extracurriculars</h2>
+                <p className='text-2xl'>January 2025 - Current</p>
+                <hr></hr>
+                <ul className='list-disc ml-2 text-main'>
+                  <li>Improv Club Vice President</li>
+                  <li>Member of Unaccompanied Minors & winner of Queens A Cappella Competition 2025</li>
+                  <li>Fundraising Coordinator for UW Theatre Student Union</li>
+                </ul>
+              </div>
+            </div>
+            <div className='wagwan w-full'>
+              <div>
+                <h2>City of Mississauga</h2>
+                <p className='text-2xl'>January 2023 - August 2025</p>
+                <hr></hr>
+                <ul className='list-disc ml-2 text-main'>
+                  <li>Managed a team of up to 10 other lifeguards & instructors</li>
+                  <li>Youngest deck supervisor in recreation department history</li>
+                  <li>Created comprehensive swimming lessons for diverse age groups and skill levels</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      
+  </div>
 
   </>)
 }
