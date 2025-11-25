@@ -15,8 +15,8 @@
   animation: fade-in-up 0.8s ease-out forwards;
 }
 @media not all and (min-width: 1024px) {
-  .p1-text {font-size: 15vw;}
-  .big-text {font-size: 20vw;}
+  .p1-text {font-size: 20vw;}
+  .big-text {font-size: 30vw;}
   .phonebye {display: none;}
   .p2-container {width: full;}
 }

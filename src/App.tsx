@@ -2,6 +2,7 @@ import { useState, useEffect, useRef} from 'react'
 import './App.css'
 
 function App() {
+  const maxWidth = 1024
   const page2Ref = useRef(null);
   const [page2Visible, setPage2Visible] = useState(false);
 
@@ -76,7 +77,7 @@ function App() {
       const windowHeight = window.innerHeight;
       const rect = slideRef.current.getBoundingClientRect();
       const start = windowHeight * 0.9;
-      const progress = start - rect.top;
+      const progress = start - rect.top * ((maxWidth > windowHeight ? 1 : 0.5));
       setX(500 - progress);
     };
     window.addEventListener("scroll", handleScroll);
@@ -93,7 +94,8 @@ function App() {
       const rect = zoomRef.current.getBoundingClientRect();
       const start = windowHeight * 0.9;
       const progress = start - rect.top;
-      const newZoom = 0.5 + progress * 0.004;
+      
+      const newZoom = 0.5 + progress * (maxWidth > windowHeight ? 0.004 : 0.006);
       const fadeThreshold = 4;
       const newOpacity = newZoom > fadeThreshold ? 0 : 1;
 
@@ -132,7 +134,7 @@ function App() {
         <h1 className='delay-3 p1-text'>next</h1>
       </div>
       <div className='flex'>
-        <h1 className="delay-4 big-text mt-8">friend.</h1>
+        <h1 className="delay-4 big-text max-lg:text-[30vw]">friend.</h1>
       </div>
     </div>
     <div className="h-full" ref={page2Ref}>
@@ -176,7 +178,7 @@ function App() {
       </div>
     </div>
     <div className='phonebye '></div>
-    <div className='overflow-hidden h-[80vh] max-lg:h-[60vh] flex flex-col gap-16' ref={page4Ref}>
+    <div className='overflow-hidden h-[80vh] max-lg:h-[40vh] flex flex-col gap-16' ref={page4Ref}>
       <div ref={slideRef} className='text-nowrap p2-text text-center transition-transform' style={{transform: `translateX(${x}px)`, transition: "transform linear"}}>
         <h1>I want to hang out with</h1>
       </div>
@@ -187,10 +189,10 @@ function App() {
     </div>
     <div className='page-5 min-h-screen flex flex-col text-center'>
       <div className='flex items-center w-full justify-center'>
-        <img src="me.jpg" className='h-[30vh] shrink-0 aspect-square rounded-full overflow-hidden ml-5 border-main border-solid border-2'/>
+        <img src="me.jpg" className='h-[30vh] max-lg:h-[20vh] shrink-0 aspect-square rounded-full overflow-hidden ml-5 border-main border-solid border-2'/>
         <div className='flex flex-col px-10 text-center justify-center'>
           <h1 className='name-text'>Gabriel Miller</h1>
-          <p className='sub-text'>Financial Analytics & Risk Management @ UWaterloo</p>
+          <p className='sub-text'>FARM @ UWaterloo</p>
         </div>
       </div>
       <div className='navbar-main flex items-center w-[80%] max-lg:w mx-auto' ref={navbar}>
