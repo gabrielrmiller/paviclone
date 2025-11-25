@@ -124,27 +124,27 @@ function App() {
     
   return (<>
   
-  <div className='body flex flex-col'>
-    <div className='page-1 h-screen items-center justify-center flex flex-col mx-auto py-20'>
-      <div className='text-page-1 flex gap-x-8'>
+  <div className='body flex flex-col max-lg:gap-y-6'>
+    <div className='page-1 h-screen items-center max-lg:text-left justify-center flex flex-col mx-auto py-20'>
+      <div className='flex max-lg:flex-col max-lg:gap-y-[3vh] gap-x-8'>
         <h1 className='delay-1 p1-text'>Meet</h1>
         <h1 className='delay-2 p1-text'>your</h1>
         <h1 className='delay-3 p1-text'>next</h1>
       </div>
-      <div className='big-text-page-1 flex'>
+      <div className='flex'>
         <h1 className="delay-4 big-text mt-8">friend.</h1>
       </div>
     </div>
     <div className="h-full" ref={page2Ref}>
-      <div className='flex flex-row h-auto'>
+      <div className='flex flex-row h-auto max-lg:flex-col max-lg:gap-y-12 '>
         <div className='ml-[10.22px] p2-text'>
-          <h1 className={`opacity-0 ${ts1}`} style={{animationDelay: '0.2s'}}>Intersecting</h1>
-          <h1 className={`opacity-0 ${ts1}`} style={{animationDelay: '0.4s'}}>awesome</h1>
-          <h1 className={`opacity-0 ${td1}  text-purp`} style={{animationDelay: '0.6s'}}>awesome</h1>
-          <h1 className={`opacity-0 ${td1}  text-mid`} style={{animationDelay: '0.8s'}}>awesome</h1>
-          <h1 className={`opacity-0 ${td1}  text-scale`} style={{animationDelay: '1s'}}>awesome</h1>
-          <h1 className={`opacity-0 ${ts1} `} style={{animationDelay: '1.2s'}}>bits &</h1>
-          <h1 className={`opacity-0 ${ts1} `} style={{animationDelay: '1.4s'}}>jokes...</h1>
+          <h1 className={`max-lg:text-[18vw] opacity-0 ${ts1}`} style={{animationDelay: '0.2s'}}>Intersecting</h1>
+          <h1 className={`max-lg:text-[18vw] opacity-0 ${ts1}`} style={{animationDelay: '0.4s'}}>awesome</h1>
+          <h1 className={`max-lg:text-[18vw] opacity-0 ${td1}  text-purp`} style={{animationDelay: '0.6s'}}>awesome</h1>
+          <h1 className={`max-lg:text-[18vw] opacity-0 ${td1}  text-mid`} style={{animationDelay: '0.8s'}}>awesome</h1>
+          <h1 className={`max-lg:text-[18vw] opacity-0 ${td1}  text-scale`} style={{animationDelay: '1s'}}>awesome</h1>
+          <h1 className={`max-lg:text-[18vw] opacity-0 ${ts1} `} style={{animationDelay: '1.2s'}}>bits &</h1>
+          <h1 className={`max-lg:text-[18vw] opacity-0 ${ts1} `} style={{animationDelay: '1.4s'}}>jokes...</h1>
         </div>
         <div className='flex flex-col gap-y-10 flex-grow items-center justify-center text-black rounded-xl w-auto'>
           <a className={`p2-container group ${fi1}`} style={{animationDelay: '1.6s'}} target="_blank" href="https://youtube.com">
@@ -154,28 +154,29 @@ function App() {
         </div>
       </div>
     </div>
-    <div className='phonebye h-52 w-full'></div>
-    <div className='h-screen' ref={page3Ref}>
-      <div className='h-[85vh] flex flex-row'>
-        <div className='flex flex-col gap-y-10 flex-grow items-center justify-center text-black rounded-xl w-auto'>
+    <div className='phonebye'></div>
+    <div className='h-auto' ref={page3Ref}>
+      <div className='h-auto flex flex-row max-lg:flex-col max-lg:gap-y-12'>
+        <div className='flex flex-col gap-y-10 flex-grow items-center justify-center text-black rounded-xl w-auto order-1'>
           <a className={`p3-container group ${fi2}`} style={{animationDelay: '2.4s'}} target="_blank" href="https://youtube.com">
             <img src="cat.webp"/><div className='transition-color duration-200 ease p3-image-label group-hover:text-[#564c39]'>Funny Cat</div>
           </a>
         </div>
-        <div className='flex flex-row h-auto'>
+        <div className='flex flex-row'>
           <div className='ml-[10.22px] p3-text'>
-            <h1 className={`opacity-0 ${ts2}`} style={{animationDelay: '0.3s'}}>Listening</h1>
-            <h1 className={`opacity-0 ${ts2}`} style={{animationDelay: '0.6s'}}>intentively</h1>
-            <h1 className={`opacity-0 ${td2}  text-purp`} style={{animationDelay: '0.9s'}}>intentively</h1>
-            <h1 className={`opacity-0 ${td2}  text-mid`} style={{animationDelay: '1.2s'}}>intentively</h1>
-            <h1 className={`opacity-0 ${td2}  text-scale`} style={{animationDelay: '1.5s'}}>intentively</h1>
-            <h1 className={`opacity-0 ${ts2} `} style={{animationDelay: '1.8s'}}>whenever</h1>
-            <h1 className={`opacity-0 ${ts2} `} style={{animationDelay: '2.1s'}}>necessary</h1>
+            <h1 className={`max-lg:text-[18vw] opacity-0 ${ts2}`} style={{animationDelay: '0.3s'}}>Listening</h1>
+            <h1 className={`max-lg:text-[18vw] opacity-0 ${ts2}`} style={{animationDelay: '0.6s'}}>intentively</h1>
+            <h1 className={`max-lg:text-[18vw] opacity-0 ${td2}  text-purp`} style={{animationDelay: '0.9s'}}>intentively</h1>
+            <h1 className={`max-lg:text-[18vw] opacity-0 ${td2}  text-mid`} style={{animationDelay: '1.2s'}}>intentively</h1>
+            <h1 className={`max-lg:text-[18vw] opacity-0 ${td2}  text-scale`} style={{animationDelay: '1.5s'}}>intentively</h1>
+            <h1 className={`max-lg:text-[18vw] opacity-0 ${ts2} `} style={{animationDelay: '1.8s'}}>whenever</h1>
+            <h1 className={`max-lg:text-[18vw] opacity-0 ${ts2} `} style={{animationDelay: '2.1s'}}>necessary</h1>
           </div>
         </div>
       </div>
     </div>
-    <div className='overflow-hidden h-[90vh] flex flex-col gap-16' ref={page4Ref}>
+    <div className='phonebye '></div>
+    <div className='overflow-hidden h-[80vh] max-lg:h-[60vh] flex flex-col gap-16' ref={page4Ref}>
       <div ref={slideRef} className='text-nowrap p2-text text-center transition-transform' style={{transform: `translateX(${x}px)`, transition: "transform linear"}}>
         <h1>I want to hang out with</h1>
       </div>
@@ -186,13 +187,13 @@ function App() {
     </div>
     <div className='page-5 min-h-screen flex flex-col text-center'>
       <div className='flex items-center w-full justify-center'>
-        <img src="me.jpg" className='h-[20vh] shrink-0 aspect-square rounded-full overflow-hidden ml-5 border-main border-solid border-2'/>
+        <img src="me.jpg" className='h-[30vh] shrink-0 aspect-square rounded-full overflow-hidden ml-5 border-main border-solid border-2'/>
         <div className='flex flex-col px-10 text-center justify-center'>
           <h1 className='name-text'>Gabriel Miller</h1>
           <p className='sub-text'>Financial Analytics & Risk Management @ UWaterloo</p>
         </div>
       </div>
-      <div className='navbar-main flex items-center w-[80%] mx-auto' ref={navbar}>
+      <div className='navbar-main flex items-center w-[80%] max-lg:w mx-auto' ref={navbar}>
         <div className={`${navslide} mx-5 opacity-0 bar h-0 flex flex-col rounded-full border-main border-solid border-2 flex-grow`} style={{animationDelay: '0.2s'}}></div>
         <ul className='link-house flex h-16 gap-4'>
           <li><a target="_blank" href="Resume.pdf" className={`opacity-0 ${navfade}`} style={{animationDelay: '0.4s'}}><img className='imgcol' src="resume_icon.png"></img></a></li>
@@ -201,7 +202,7 @@ function App() {
           <li><a target="_blank" href="https://github.com/gabrielrmiller" className={`opacity-0 ${navfade}`} style={{animationDelay: '1s'}}><img className='imgcol' src="github.png"></img></a></li>
         </ul>
       </div>
-      <div className='mx-auto mb-5 w-2/3 text-center h-auto'><h1 className='name-text py-5'>Recent Experiences</h1>
+      <div className='mx-auto mb-5 w-2/3 max-lg:w-[90%] text-center h-auto'><h1 className='name-text py-5'>Recent Experiences</h1>
         <div>
           <div className='wagwan'>
             <h2>Freelance Software Developer</h2>
@@ -214,10 +215,11 @@ function App() {
             </ul>
           </div>
         </div>
-          <div className='flex'>
-            <div className='wagwan w-full'>
+          <div className='flex max-lg:flex-col'>
+            <div className='wagwan lg:w-full'>
               <div>
-                <h2> Exam P - SOA</h2>
+                <h2> Exam P</h2>
+                <p className='text-xl italic'>Society of Actuaries</p>
                 <p className='text-2xl'>November 2025</p>
                 <hr></hr>
                 <ul className='py-3 text-main'>
@@ -225,19 +227,20 @@ function App() {
                 </ul>
               </div>
             </div>
-            <div className='wagwan w-full'>
-              <div className=''>
-                <h2> Exam FM - SOA</h2>
+            <div className='wagwan lg:w-full'>
+              <div>
+                <h2> Exam FM</h2>
+                <p className='text-xl italic'>Society of Actuaries</p>
                 <p className='text-2xl'>August 2025</p>
                 <hr></hr>
                   <p className=' text-main py-3'>Proficient in interest theory and financial valuation. </p>
               </div>
             </div>
           </div>
-          <div className='flex'>
-            <div className='wagwan w-full'>
+          <div className='flex max-lg:flex-col'>
+            <div className='wagwan'>
               <div>
-                <h2>UW Extracurriculars</h2>
+                <h2>UW Clubs</h2>
                 <p className='text-2xl'>January 2025 - Current</p>
                 <hr></hr>
                 <ul className='list-disc ml-2 text-main'>
@@ -247,7 +250,7 @@ function App() {
                 </ul>
               </div>
             </div>
-            <div className='wagwan w-full'>
+            <div className='wagwan'>
               <div>
                 <h2>City of Mississauga</h2>
                 <p className='text-2xl'>January 2023 - August 2025</p>
