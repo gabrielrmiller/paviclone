@@ -159,7 +159,7 @@ function App() {
     <div className='phonebye'></div>
     <div className='h-auto' ref={page3Ref}>
       <div className='h-auto flex flex-row max-lg:flex-col max-lg:gap-y-12'>
-        <div className='flex flex-col gap-y-10 flex-grow items-center justify-center text-black rounded-xl w-auto order-1'>
+        <div className='flex flex-col gap-y-10 flex-grow items-center justify-center text-black rounded-xl w-auto max-lg:order-1'>
           <a className={`p3-container group ${fi2}`} style={{animationDelay: '2.4s'}} target="_blank" href="https://youtube.com">
             <img src="cat.webp"/><div className='transition-color duration-200 ease p3-image-label group-hover:text-[#564c39]'>Funny Cat</div>
           </a>
