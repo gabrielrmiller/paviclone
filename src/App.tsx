@@ -188,20 +188,20 @@ function App() {
 
     </div>
     <div className='page-5 min-h-screen flex flex-col text-center'>
-      <div className='flex items-center w-full justify-center'>
-        <img src="me.jpg" className='h-[30vh] max-lg:h-[20vh] shrink-0 aspect-square rounded-full overflow-hidden ml-5 border-main border-solid border-2'/>
-        <div className='flex flex-col px-10 text-center justify-center'>
+      <div className='flex items-center gap-5 w-full justify-center'>
+        <img src="me.jpg" className='h-[30vh] max-lg:h-[20vh] shrink-0 aspect-square rounded-full overflow-hidden border-main border-solid border-2'/>
+        <div className='flex flex-col text-center justify-center'>
           <h1 className='name-text'>Gabriel Miller</h1>
           <p className='sub-text'>FARM @ UWaterloo</p>
         </div>
       </div>
-      <div className='navbar-main flex items-center w-[80%] max-lg:w mx-auto' ref={navbar}>
-        <div className={`${navslide} mx-5 opacity-0 bar h-0 flex flex-col rounded-full border-main border-solid border-2 flex-grow`} style={{animationDelay: '0.2s'}}></div>
-        <ul className='link-house flex h-16 gap-4'>
-          <li><a target="_blank" href="Resume.pdf" className={`opacity-0 ${navfade}`} style={{animationDelay: '0.4s'}}><img className='imgcol' src="resume_icon.png"></img></a></li>
-          <li><a target="_blank" href="mailto:gr2mille@uwaterloo" className={`opacity-0 ${navfade}`} style={{animationDelay: '0.6s'}}><img className='imgcol' src="email.png"></img></a></li>
-          <li><a target="_blank" href="www.linkedin.com/in/gabrielrmiller" className={`opacity-0 ${navfade}`} style={{animationDelay: '0.8s'}}><img className='imgcol' src="linkedin.webp"></img></a></li>
-          <li><a target="_blank" href="https://github.com/gabrielrmiller" className={`opacity-0 ${navfade}`} style={{animationDelay: '1s'}}><img className='imgcol' src="github.png"></img></a></li>
+      <div className='navbar-main flex items-center justify-center w-[80%] max-lg:w-full mx-auto' ref={navbar}>
+        <div className={`${navslide} mx-5 opacity-0 h-0 flex flex-col rounded-full border-main border-solid border-2 flex-grow`} style={{animationDelay: '0.2s'}}></div>
+        <ul className='link-house flex gap-4'>
+          <li><a target="_blank" href="Resume.pdf" className={`hover:sepia opacity-0 ${navfade}`} style={{animationDelay: '0.4s'}}><img className='imgcol' src="resume_icon.png"></img></a></li>
+          <li><a target="_blank" href="mailto:gr2mille@uwaterloo" className={`hover:sepia opacity-0 ${navfade}`} style={{animationDelay: '0.6s'}}><img className='imgcol' src="email.png"></img></a></li>
+          <li><a target="_blank" href="https://linkedin.com/in/gabrielrmiller" className={`hover:sepia opacity-0 ${navfade}`} style={{animationDelay: '0.8s'}}><img className='imgcol' src="linkedin.webp"></img></a></li>
+          <li><a target="_blank" href="https://github.com/gabrielrmiller" className={`hover:sepia opacity-0 ${navfade}`} style={{animationDelay: '1s'}}><img className='imgcol' src="github.png"></img></a></li>
         </ul>
       </div>
       <div className='mx-auto mb-5 w-2/3 max-lg:w-[90%] text-center h-auto'><h1 className='name-text py-5'>Recent Experiences</h1>
@@ -210,7 +210,7 @@ function App() {
             <h2>Freelance Software Developer</h2>
             <p className='text-2xl'>December 2025 - Current</p>
             <hr></hr>
-            <ul className='list-disc ml-2 p-4 text-main'>
+            <ul className='list-disc p-4 text-main'>
               <li>Developed front-end and back-end programs for personal and professional use</li>
               <li>Within a React framework, I utilise Typescript, Tailwind CSS, & HTML to create stunning websites with highly optimized code</li>
               <li>Portfolio of work: <a className='underline' target='_blank' href='https://bettergpt-lake.vercel.app/'>Bettergpt</a> </li>
@@ -224,8 +224,8 @@ function App() {
                 <p className='text-xl italic'>Society of Actuaries</p>
                 <p className='text-2xl'>November 2025</p>
                 <hr></hr>
-                <ul className='py-3 text-main'>
-                  <li>Proficient in probability models and risk analysis. </li>
+                <ul className='p-4 text-main'>
+                  <li>Proficient in probability models and risk analysis </li>
                 </ul>
               </div>
             </div>
@@ -235,7 +235,7 @@ function App() {
                 <p className='text-xl italic'>Society of Actuaries</p>
                 <p className='text-2xl'>August 2025</p>
                 <hr></hr>
-                  <p className=' text-main py-3'>Proficient in interest theory and financial valuation. </p>
+                  <p className=' text-main py-4 pl-4 pr-2'>Proficient in interest theory and financial valuation </p>
               </div>
             </div>
           </div>
@@ -245,7 +245,7 @@ function App() {
                 <h2>UW Clubs</h2>
                 <p className='text-2xl'>January 2025 - Current</p>
                 <hr></hr>
-                <ul className='list-disc ml-2 text-main'>
+                <ul className='list-disc p-4 text-main'>
                   <li>Improv Club Vice President</li>
                   <li>Member of Unaccompanied Minors & winner of Queens A Cappella Competition 2025</li>
                   <li>Fundraising Coordinator for UW Theatre Student Union</li>
@@ -254,10 +254,10 @@ function App() {
             </div>
             <div className='wagwan'>
               <div>
-                <h2>City of Mississauga</h2>
+                <h2>Lifeguard Supervisor</h2>
                 <p className='text-2xl'>January 2023 - August 2025</p>
                 <hr></hr>
-                <ul className='list-disc ml-2 text-main'>
+                <ul className='list-disc p-4 text-main'>
                   <li>Managed a team of up to 10 other lifeguards & instructors</li>
                   <li>Youngest deck supervisor in recreation department history</li>
                   <li>Created comprehensive swimming lessons for diverse age groups and skill levels</li>

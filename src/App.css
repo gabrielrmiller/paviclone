@@ -137,8 +137,8 @@
   height: 70px;
 }
 .imgcol {
-  height: 5vw;
-  width: 5vw;
+  height: 8vw;
+  width: 8vw;
   filter: brightness(0) saturate(100%) invert(88%) sepia(7%) saturate(547%) hue-rotate(95deg) brightness(88%) contrast(92%);
 }
 
